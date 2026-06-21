@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant</title>
+</head>
+<body>
+  <h1>Welcome to Our Restaurant</h1>
+
+  <nav>
+    <a href="/">Home</a> |
+    <a href="/admin">Admin Panel</a>
+  </nav>
+
+  <hr>
+
+  <h2>Menu</h2>
+  <div id="menu"></div>
+
+  <hr>
+
+  <h2>Place an Order</h2>
+  <form id="orderForm">
+    <label>Your Name: <input type="text" id="orderName" required></label><br><br>
+    <div id="orderItems"></div>
+    <button type="submit">Place Order</button>
+  </form>
+  <div id="orderResult"></div>
+
+  <hr>
+
+  <h2>Reserve a Table</h2>
+  <form id="reservationForm">
+    <label>Name: <input type="text" id="resName" required></label><br>
+    <label>Phone: <input type="text" id="resPhone"></label><br>
+    <label>Date: <input type="date" id="resDate" required></label><br>
+    <label>Time: <input type="time" id="resTime" required></label><br>
+    <label>Guests: <input type="number" id="resGuests" required min="1"></label><br><br>
+    <button type="submit">Reserve</button>
+  </form>
+  <div id="reservationResult"></div>
+
+  <hr>
+
+  <h2>Check Reservation Status</h2>
+  <label>Reservation ID: <input type="number" id="searchResId"></label>
+  <button id="searchResBtn">Search</button>
+  <div id="searchResult"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

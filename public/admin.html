@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+</head>
+<body>
+  <h1>Admin Panel</h1>
+
+  <nav>
+    <a href="/">Home</a> |
+    <a href="/admin">Admin Panel</a>
+  </nav>
+
+  <hr>
+
+  <h2>Orders</h2>
+  <button id="loadOrders">Load Orders</button>
+  <div id="ordersList"></div>
+
+  <hr>
+
+  <h2>Reservations</h2>
+  <button id="loadReservations">Load Reservations</button>
+  <div id="reservationsList"></div>
+
+  <hr>
+
+  <h2>Menu Management</h2>
+  <h3>Add Menu Item</h3>
+  <form id="addMenuForm">
+    <label>Name: <input type="text" id="menuName" required></label><br>
+    <label>Description: <input type="text" id="menuDesc"></label><br>
+    <label>Price: <input type="number" step="0.01" id="menuPrice" required></label><br>
+    <label>Category: <input type="text" id="menuCategory"></label><br>
+    <button type="submit">Add Item</button>
+  </form>
+  <div id="addMenuResult"></div>
+
+  <h3>Edit Menu Item</h3>
+  <form id="editMenuForm">
+    <label>Item ID: <input type="number" id="editMenuId" required></label><br>
+    <label>New Name (leave blank to keep): <input type="text" id="editMenuName"></label><br>
+    <label>New Price (leave blank to keep): <input type="number" step="0.01" id="editMenuPrice"></label><br>
+    <label>New Category: <input type="text" id="editMenuCategory"></label><br>
+    <label>New Sort Order: <input type="number" id="editMenuOrder"></label><br>
+    <button type="submit">Update Item</button>
+  </form>
+  <div id="editMenuResult"></div>
+
+  <h3>Delete Menu Item</h3>
+  <label>Item ID: <input type="number" id="deleteMenuId"></label>
+  <button id="deleteMenuBtn">Delete</button>
+  <div id="deleteMenuResult"></div>
+
+  <h3>Move Order (Reorder)</h3>
+  <label>Item ID: <input type="number" id="moveOrderId"></label>
+  <label>New Sort Position: <input type="number" id="moveOrderPosition"></label>
+  <button id="moveOrderBtn">Move</button>
+  <div id="moveOrderResult"></div>
+
+  <h3>Current Menu</h3>
+  <button id="loadMenuBtn">Load Menu</button>
+  <div id="menuList"></div>
+
+  <hr>
+
+  <h2>Generate Report</h2>
+  <button id="reportBtn">Generate Report</button>
+  <div id="reportResult"></div>
+
+  <script src="/admin.js"></script>
+</body>
+</html>

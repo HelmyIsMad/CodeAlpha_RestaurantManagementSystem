@@ -70,7 +70,7 @@ A restaurant management system with Express.js backend and vanilla HTML/JS front
 | GET | `/api/admin/reservations` | List all reservations |
 | GET | `/api/admin/report` | Generate report (order/reservation counts, item popularity) |
 
-## Frontend Routes
+## Pages
 
 | Route | Page | Description |
 |-------|------|-------------|
